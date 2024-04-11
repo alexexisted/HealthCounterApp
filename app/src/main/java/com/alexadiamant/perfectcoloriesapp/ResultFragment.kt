@@ -18,6 +18,8 @@ class ResultFragment : Fragment() {
     //initialize Args class
     private val args: ResultFragmentArgs by navArgs()
 
+    private val contract = ContractsImpl()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,42 +40,22 @@ class ResultFragment : Fragment() {
         val height = args.height.toInt()
         val gender = args.gender
         val activity = args.activity.toDouble()
-        //use method to calculate and show data on view
-        val normalCalories = count(age, weight, height, gender, activity)
+
+        //use methods to calculate and show data on view
+        val normalCalories = contract.count(age, weight, height, gender, activity)
+
+        val toGain = contract.toGainWeight(normalCalories)
+
+        val toLose = contract.toLoseWeight(normalCalories)
 
         //set values to text views
         binding.tvResultNormal.text = "You need to get about $normalCalories to keep your shape"
 
-        binding.tvGainWeight.text = "If you want to gain weight - keep getting about ${toGainWeight(normalCalories)}"
+        binding.tvGainWeight.text = "If you want to gain weight - keep getting about $toGain"
 
-        binding.tvLoseWeight.text = "If you want to lose weight - keep getting about ${toLoseWeight(normalCalories)}"
+        binding.tvLoseWeight.text = "If you want to lose weight - keep getting about $toLose"
 
         return view
-    }
-
-    //method to calculate calories using args as input data
-    private fun count(age: Int, weight: Int, height: Int, gender: String, activity: Double): Int{
-        val result = (447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age))
-        //check gender of person for better quality of calculations
-        when (gender){
-
-            "Woman" -> {val result = (((9.99 * weight) + (6.25 * height) + (4.92 * age)) - 161) * activity}
-
-            "Man" -> {val result = (((9.99 * weight) + (6.25 * height) + (4.92 * age)) + 5) * activity}
-        }
-        return result.toInt()
-    }
-
-    //method to calculate calories to gain weight
-    private fun toGainWeight(normAmount: Int): Int{
-        val toGain = normAmount + (normAmount * 0.3).toInt()
-        return toGain
-    }
-
-    //method to calculate calories to lose weight
-    private fun toLoseWeight(normAmount: Int): Int{
-        val toLose = normAmount - (normAmount * 0.15).toInt()
-        return toLose
     }
 
     override fun onDestroyView() {
