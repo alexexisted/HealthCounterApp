@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">PerfectColoriesApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_the_data">Enter the data</string>
+    <string name="enter_your_age">Enter your age</string>
+    <string name="enter_your_weight">Enter your weight</string>
+    <string name="enter_your_height">Enter your height</string>
+    <string name="woman">Woman</string>
+    <string name="man">Man</string>
+    <string name="choose_yout_level_of_activity">Choose yout level of activity</string>
+    <string name="calculate">Calculate</string>
+    <string name="results">Results</string>
+    <string name="home">Home</string>
 
     <string-array name="spinnerActivity">
         <item>I am not doing sport</item>

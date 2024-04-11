@@ -15,7 +15,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Results"
+                android:text="@string/results"
                 android:textSize="35sp"
                 android:layout_marginVertical="15dp"
                 android:gravity="center_horizontal"
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:text="Home"
+                android:text="@string/home"
                 android:textSize="25sp"
                 android:layout_gravity="center_horizontal"
         />

@@ -20,13 +20,13 @@
                 android:gravity="center_horizontal"
                 android:layout_marginBottom="25dp"
                 android:textSize="40sp"
-                android:text="Enter the data"/>
+                android:text="@string/enter_the_data"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="Enter your age"/>
+                android:text="@string/enter_your_age"/>
 
         <EditText
                 android:id="@+id/etAge"
@@ -34,14 +34,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
                 android:inputType="number"
-                android:hint="Enter your age"
+                android:hint="@string/enter_your_age"
                 android:minHeight="55dp"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="Enter your weight"/>
+                android:text="@string/enter_your_weight"/>
 
         <EditText
                 android:id="@+id/etWeight"
@@ -49,14 +49,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
                 android:inputType="number"
-                android:hint="Enter your weight"
+                android:hint="@string/enter_your_weight"
                 android:minHeight="55dp"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="Enter your height"/>
+                android:text="@string/enter_your_height"/>
 
         <EditText
                 android:id="@+id/etHeight"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:inputType="number"
-                android:hint="Enter your height"
+                android:hint="@string/enter_your_height"
                 android:minHeight="55dp"/>
 
         <RadioGroup
@@ -79,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:text="Woman"
+                    android:text="@string/woman"
                     android:textSize="20sp"
             />
 
@@ -88,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:text="Man"
+                    android:text="@string/man"
                     android:textSize="20sp"
             />
 
@@ -97,7 +97,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Choose yout level of activity"
+                android:text="@string/choose_yout_level_of_activity"
                 android:textSize="25sp"
         />
 
@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
-                android:text="Calculate"
+                android:text="@string/calculate"
                 android:textSize="20sp"
         />
 
