@@ -29,15 +29,16 @@ class CollectInfoFragment : Fragment() {
             val weightEt = binding.etWeight.text.toString()
             val heightEt = binding.etHeight.text.toString()
             val radioGroup = binding.rgGender.checkedRadioButtonId
-            var gender = ""
+//            var gender: String
             val userActivity = binding.spActivity.selectedItem.toString()
             var activityLevel: Float = 0.0F
 
             //check which radio button was pressed and set value to gender
-            if (radioGroup.equals(binding.rbMan)) {
-                gender = "Man"
+            val gender = if (radioGroup.equals(binding.rbMan)) {
+                "Man"
+            } else {
+                "Woman"
             }
-            else {gender = "Woman"}
 
             //check which activity user choose and set coefficient to level variable
             when (userActivity) {
