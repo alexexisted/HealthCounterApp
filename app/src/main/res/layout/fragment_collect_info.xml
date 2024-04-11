@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CollectInfoFragment">
+
+    <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginVertical="30dp"
+                 android:layout_marginHorizontal="30dp"
+                 android:orientation="vertical"
+                 android:gravity="center_horizontal">
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:textSize="40sp"
+                android:text="Enter the data"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Enter your age"/>
+
+        <EditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:inputType="number"
+                android:hint="Enter your age"
+                android:minHeight="55dp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Enter your weight"/>
+
+        <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:inputType="number"
+                android:hint="Enter your weight"
+                android:minHeight="55dp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Enter your height"/>
+
+        <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:inputType="number"
+                android:hint="Enter your height"
+                android:minHeight="55dp"/>
+
+        <RadioGroup
+                android:id="@+id/rgGender"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content">
+
+            <RadioButton
+                    android:id="@+id/rbWoman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Woman"
+                    android:textSize="20sp"
+            />
+
+            <RadioButton
+                    android:id="@+id/rbMan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Man"
+                    android:textSize="20sp"
+            />
+
+        </RadioGroup>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose yout level of activity"
+                android:textSize="25sp"
+        />
+
+        <Spinner
+                android:id="@+id/spActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:minHeight="50dp"
+                android:entries="@array/spinnerActivity"
+        />
+
+        <Button
+                android:id="@+id/btCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Calculate"
+                android:textSize="20sp"
+        />
+
+
+
+    </LinearLayout>
+</layout>
