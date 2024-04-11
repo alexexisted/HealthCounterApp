@@ -43,4 +43,35 @@ class ContractsImpl: CollectInfoContract, ResultContract {
         val toLose = normAmount - (normAmount * 0.15).toInt()
         return toLose
     }
+
+    //check if age valid
+    override fun ageValidator(age: String): Boolean {
+        val minAge = 10
+        val maxAge = 110
+        if (age.toInt() in (minAge .. maxAge)){
+            return true
+        }
+        else {
+            return false
+        }
+    }
+
+    //check if weight valid
+    override fun weightValidator(weight: String): Boolean {
+        val minWeight = 30
+        val maxWeight = 250
+
+        if (weight.toInt() in (minWeight  ..  maxWeight)) {return true}
+        else {return false}
+    }
+
+    //check if height valid
+    override fun heightValidator(height: String): Boolean {
+        val minHeight = 100
+        val maxHeight = 250
+
+        if (height.toInt() in (minHeight .. maxHeight)) {return true}
+        else {return false}
+    }
+
 }
